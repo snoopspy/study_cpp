@@ -1,4 +1,6 @@
 build-*/
+*.a
 *.o
 *.pro.user
 Makefile
+Makefile.*
