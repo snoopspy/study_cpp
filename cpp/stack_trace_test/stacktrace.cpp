@@ -11,7 +11,7 @@ StackTrace::StackTrace()
 {
   DLOG(INFO) << "StackTrace::StackTrace()";
   prev_handler_ = 0;
-  setOutput(stderr);
+  setOutput(stdout);
   setMaxFrames(10);
   setSignal(SIGUSR1);
 }
@@ -67,7 +67,7 @@ void StackTrace::dump()
     std::string s = ent->d_name;
     if (s == "." || s == "..") continue;
     pid_t tid = std::stoi(s);
-    DLOG(INFO) << "writing call stack for tid=" << tid;
+    //DLOG(INFO) << "writing call stack for tid=" << tid;
     long int res = syscall(SYS_tgkill, tgid, tid, signum_); // tgkill(tgid, tid, signum_);
     if (res != 0) {
       LOG(ERROR) << "Error in call kill " << strerror(errno);
