@@ -1,0 +1,4 @@
+# how to check inline build
+g++ -c -O2 -flto -o cpp_test.o cpp_test.cpp
+g++ -c -O2 -flto -o multiply.o multiply.cpp
+g++ -O1 -g -flto -o cpp_test cpp_test.o multiply.o 
