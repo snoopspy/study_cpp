@@ -67,7 +67,6 @@ void StackTrace::dump()
     std::string s = ent->d_name;
     if (s == "." || s == "..") continue;
     pid_t tid = std::stoi(s);
-    //DLOG(INFO) << "writing call stack for tid=" << tid;
     long int res = syscall(SYS_tgkill, tgid, tid, signum_); // tgkill(tgid, tid, signum_);
     if (res != 0) {
       LOG(ERROR) << "Error in call kill " << strerror(errno);
@@ -104,7 +103,7 @@ void StackTrace::printStacktrace()
 
   // iterate over the returned symbol lines. skip the first, it is the
   // address of this function.
-  for (int i = 1; i < addrlen; i++)
+  for (int i = 2; i < addrlen; i++)
   {
     char *begin_name = 0, *begin_offset = 0, *end_offset = 0;
 
