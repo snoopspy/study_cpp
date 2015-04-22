@@ -166,8 +166,8 @@ void StackTrace::sighandler(int signum)
     StackTrace::instance().printStacktrace();
 }
 
-StackTrace StackTrace::instance_;
 StackTrace& StackTrace::instance()
 {
-  return instance_;
+  static StackTrace _instance;
+  return _instance;
 }

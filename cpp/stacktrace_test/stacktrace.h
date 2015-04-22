@@ -30,8 +30,6 @@ protected:
   void printStacktrace();
   static void sighandler(int signum);
 
-protected:
-  static StackTrace instance_;
 public:
   static StackTrace& instance();
 };

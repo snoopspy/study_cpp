@@ -35,7 +35,7 @@ TEST(StackTrace, sleepThreadTest)
     for (auto& thread: threads)
       thread.join();
   }
-  LOG(INFO) << "beg sleepThreadTest";
+  LOG(INFO) << "end sleepThreadTest";
 }
 
 #include <atomic>
