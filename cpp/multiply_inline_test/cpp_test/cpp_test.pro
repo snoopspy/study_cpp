@@ -1,8 +1,6 @@
 TEMPLATE = app
 CONFIG -= qt
-CONFIG += console
 QMAKE_CXXFLAGS += -g -flto
-#QMAKE_LFLAGS_RELEASE -= -Wl,-O1
-QMAKE_LFLAGS_RELEASE += -O3 -g -flto
+QMAKE_LFLAGS_RELEASE += -g -flto
 SOURCES += *.cpp
 HEADERS += *.h
