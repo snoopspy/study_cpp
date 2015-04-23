@@ -10,4 +10,4 @@ void Obj1::foo() { cout << "Obj1::foo\n";   }
 Obj1& Obj1::instance() {
   return instance_;
 }
-Obj1 Obj1::instance_;
+Obj1 Obj1::instance_; // global static object

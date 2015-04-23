@@ -8,6 +8,6 @@ Obj2::~Obj2()    { cout << "Obj2::~Obj2\n"; }
 void Obj2::foo() { cout << "Obj2::foo\n";   }
 
 Obj2& Obj2::instance() {
-  static Obj2 instance_;
+  static Obj2 instance_; // local static object
   return instance_;
 }
