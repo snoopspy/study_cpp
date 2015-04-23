@@ -1,8 +1,3 @@
-g++ -c -std=c++11 -g -flto -O2 -Wall -W -o cpp_test.o cpp_test.cpp
-g++ -c -std=c++11 -g -flto -O2 -Wall -W -o multiply.o multiply.cpp
-
-[call]
-g++ -Wl,-O1 -o cpp_test cpp_test.o multiply.o   -g -flto 
-
-[inline]
-g++ -Wl,-O1 -o cpp_test cpp_test.o multiply.o   -g -flto -O3
+[Auto inline compile and link option]
+Compile option : -O2 -g -flto
+Link option    : -O1 -g -flto 
