@@ -1,5 +1,0 @@
-CONFIG -= qt
-QMAKE_CXXFLAGS_RELEASE += -O2 -g -flto
-QMAKE_LFLAGS_RELEASE += -O1 -g -flto
-SOURCES += *.cpp
-HEADERS += *.h

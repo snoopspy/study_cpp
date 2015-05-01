@@ -1,10 +1,10 @@
 #include <iostream>
-#include "multiply.h"
+#include <foo5.h>
 
 using namespace std;
 
 int main() {
   int i; cin >> i;
-  int j = multiply(i);
+  int j = foo5(i);
   cout << j << endl;
 }
