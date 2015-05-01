@@ -1,3 +1,3 @@
-TEMPLATE = app
+CONFIT -= qt
 SOURCES += *.cpp
 HEADERS += *.h
