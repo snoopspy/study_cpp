@@ -1,10 +1,16 @@
 CONFIG -= qt
 CONFIG += console
 
-CONFIG += gstacktrace
-include(../../../../../g/g/g.pri)
-QMAKE_CXXFLAGS_RELEASE += -O2 -g -flto
-QMAKE_LFLAGS_RELEASE += -O1 -g -flto
-INCLUDEPATH += ../foo
-SOURCES += ../foo/*.cpp *.cpp
-HEADERS += ../foo/*.h
+QMAKE_CXXFLAGS = -std=c++11
+QMAKE_CXXFLAGS_DEBUG =
+QMAKE_CXXFLAGS_RELEASE = -O2  -flto
+QMAKE_CXXFLAGS_WARN_ON =
+QMAKE_CXXFLAGS_APP =
+QMAKE_LFLAGS = -rdynamic
+QMAKE_LFLAGS_DEBUG =
+QMAKE_LFLAGS_RELEASE = -O1 -flto
+QMAKE_LFLAGS_RPATH =
+
+INCLUDEPATH += ../common
+SOURCES += *.cpp ../common/*.cpp
+HEADERS += ../common/*.h

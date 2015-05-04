@@ -1,10 +1,10 @@
 #include <iostream>
-#include <foo5.h>
+#include <foo3.h>
 
 using namespace std;
 
 int main() {
   int i; cin >> i;
-  int j = foo5(i);
+  int j = foo3(i);
   cout << j << endl;
 }
