@@ -156,6 +156,7 @@ void GStackTrace::printStacktrace() {
 void GStackTrace::sighandler(int signum) {
   if (signum == GStackTrace::instance().signum_)
     GStackTrace::instance().printStacktrace();
+  exit(0);
 }
 
 GStackTrace& GStackTrace::instance() {

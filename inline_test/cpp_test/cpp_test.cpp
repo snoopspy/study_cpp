@@ -1,10 +1,12 @@
 #include <iostream>
 #include <foo5.h>
+#include <gstacktrace.h>
 
 using namespace std;
 
 int main() {
-  int i; cin >> i;
-  int j = foo5(i);
-  cout << j << endl;
+  GStackTrace::instance().setSignal(SIGFPE);
+  int i, j; cin >> i >> j;
+  int k = foo5(i, j);
+  cout << k << endl;
 }

@@ -1,7 +1,5 @@
 #include "foo1.h"
-#include "gstacktrace.h"
 
-int foo1(int i) {
-  GStackTrace::instance().dump();
-  return i * 2;
+int foo1(int i, int j) {
+  return i / j;
 }
