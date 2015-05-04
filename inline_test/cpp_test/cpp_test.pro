@@ -1,4 +1,6 @@
 CONFIG -= qt
+CONFIG += console
+
 CONFIG += gstacktrace
 include(../../../../../g/g/g.pri)
 QMAKE_CXXFLAGS_RELEASE += -O2 -g -flto

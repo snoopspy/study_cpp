@@ -1,4 +1,6 @@
 CONFIG -= qt
+CONFIG += console
+
 QMAKE_CXXFLAGS -= -g -flto -O3
 QMAKE_LFLAGS += -g -flto
 INCLUDEPATH += ../foo
