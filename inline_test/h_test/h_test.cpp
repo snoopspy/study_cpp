@@ -1,5 +1,5 @@
 #include <iostream>
-#include <GStackTrace>
+#include <gstacktrace.h>
 
 using namespace std;
 
