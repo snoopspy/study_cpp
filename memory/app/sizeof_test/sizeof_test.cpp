@@ -20,6 +20,11 @@ void primitive_test() {
   cout << "void*     = " << sizeof(void*) << endl;
 }
 
+void basic_test() {
+  cout << "size_t =    " << sizeof(size_t) << endl;
+  cout << "ssize_t =   " << sizeof(ssize_t) << endl;
+}
+
 /*
 void container_test() {
   array_test();
@@ -75,6 +80,7 @@ void string_test() {
 
 int main() {
   primitive_test();
+  basic_test();
   list_test();
   vector_test();
   set_test();
