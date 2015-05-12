@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../../src/malloc.h"
+#include "../../src/mymalloc.h"
 
 using namespace std;
 
@@ -11,12 +11,12 @@ public:
 
   void* operator new(size_t size) {
     cout << "MyNewString::new size=" << size << endl;
-    return Malloc::instance().acquire(size);
+    return MyMalloc::instance().acquire(size);
   }
 
   void operator delete(void* ptr) {
     cout << "MyNewString::delete ptr=" << ptr << endl;
-    Malloc::instance().release(ptr);
+    MyMalloc::instance().release(ptr);
   }
 };
 
