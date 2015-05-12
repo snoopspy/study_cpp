@@ -27,21 +27,3 @@ MyMalloc& MyMalloc::instance() {
   return malloc;
 }
 
-#ifdef __cplusplus
-extern "C"
-{
-#endif
-
-void* malloc(size_t size) __THROW  {
-  return MyMalloc::instance().acquire(size);
-}
-
-void free(void* ptr) __THROW {
-  MyMalloc::instance().release(ptr);
-}
-
-#ifdef __cplusplus
-}
-#endif
-
-
