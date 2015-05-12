@@ -1,3 +1,4 @@
+```
 char      = 1
 short     = 2
 int       = 4
@@ -28,3 +29,4 @@ map<char[100], char[1]>   = 48
 map<char[100], char[100]> = 48
 string  = 8
 wstring = 8
+```
