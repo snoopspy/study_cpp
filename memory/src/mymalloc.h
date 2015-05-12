@@ -15,3 +15,15 @@ public:
 public:
   static MyMalloc& instance();
 };
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+void* malloc(size_t size) __THROW;
+void free(void* ptr) __THROW;
+
+#ifdef __cplusplus
+}
+#endif

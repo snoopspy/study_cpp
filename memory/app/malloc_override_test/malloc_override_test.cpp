@@ -1,5 +1,5 @@
 //#include <cstdlib>
-#include <malloc.h>
+#include <mymalloc.h>
 
 int main() {
   void* p = malloc(1234);
