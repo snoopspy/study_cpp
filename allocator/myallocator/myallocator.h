@@ -11,11 +11,11 @@ struct MyAllocator : std::allocator<T>
   template <typename U> struct rebind { typedef MyAllocator<U> other; };
   T* allocate(size_t n) {
     T* res = static_cast<T*>(operator new(n*sizeof(T)));
-    std::cout << "MyAllocator::allocate   " << (void*)res << " " << n << std::endl;
+    std::cout << "MyAllocator::allocate   " << (void*)res << " " << n*sizeof(T) << std::endl;
     return res;
   }
-  void deallocate(T* p, size_t size) {
-    std::cout << "MyAllocator::deallocate " << (void*)p << " " << size << std::endl;
+  void deallocate(T* p, size_t n) {
+    std::cout << "MyAllocator::deallocate " << (void*)p << " " << n * sizeof(T) << std::endl;
     operator delete(p);
   }
 };
