@@ -1,4 +1,4 @@
 CONFIG += qt
 SOURCES += *.cpp
 HEADERS += *.h
-include(/root/proj/g/gmem/gmem.pri)
+#include(/home/gilgil/proj/g/gmem/gmem.pri)
