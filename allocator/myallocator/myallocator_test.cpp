@@ -1,3 +1,4 @@
+#include <iostream>
 #include "myallocator.h"
 
 void simple_test() {
@@ -7,10 +8,13 @@ void simple_test() {
 }
 
 void string_test() {
-
+  typedef std::basic_string<char, std::char_traits<char>, MyAllocator<char> > MyString;
+  MyString ms;
+  ms = "hello world";
+  std::cout << ms << std::endl;
 }
 
 int main() {
-  simple_test();
+  //simple_test();
   string_test();
 }
