@@ -1,4 +1,5 @@
 CONFIG -= qt
 QMAKE_CXXFLAGS *= -g
+QMAKE_LFLAGS *= -O1
 SOURCES += *.cpp
 HEADERS += obj.h
